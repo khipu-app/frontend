@@ -9,6 +9,7 @@ GENERATE_FONT() {
         docker run --rm -v "$(pwd):/app" raeffs/glyphhanger --whitelist="${SUBSETCODES[i]}" --formats="${FORMATS[j]}" --subset="$INPUTPATH/${FILENAMES[k]}.$EXTENSION" --css
         mkdir -p $(echo "$OUTPUTPATH")
         mv $(echo "$INPUT") $(echo "$OUTPUT")
+        mv $(echo "$INPUTPATH/${FILENAMES[k]}.css") $(echo "$OUTPUTPATH")
       done
     done
   done
