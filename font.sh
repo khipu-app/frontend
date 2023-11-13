@@ -32,7 +32,7 @@ SUBSETCODES=("0000−007F" "0080−00FF" "0100−017F" "0180−024F" "0370−03F
 FORMATS=("woff" "woff2")
 
 # Набор значений переменных для шрифта FiraSans
-FILENAMES=("FiraSans-Bold" "FiraSans-Light" "FiraSans-Medium" "FiraSans-Regular")
+FILENAMES=("FiraSans-Bold" "FiraSans-Medium" "FiraSans-Regular")
 EXTENSION="ttf"
 INPUTPATH="./service/fonts/Fira_Sans"
 OUTPUTPATH="./src/assets/fonts/Fira-Sans"
