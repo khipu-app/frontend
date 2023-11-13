@@ -25,12 +25,10 @@ GENERATE_FONT() {
 
 # Глобальные переменные
 # Набор названий для сабсетов
-# SUBSETNAMES=("Latin" "LatinSupplement" "LatinExtendedA" "LatinExtendedB" "GreekCoptic" "Cyrilic" "CyrilicSupplement")
-SUBSETNAMES=("Latin")
+SUBSETNAMES=("Latin" "LatinSupplement" "LatinExtendedA" "LatinExtendedB" "GreekCoptic" "Cyrilic" "CyrilicSupplement")
 
 # Набор диапазонов кодов глифов для каждого из сабсетов
-# SUBSETCODES=("0000−007F" "0080−00FF" "0100−017F" "0180−024F" "0370−03FF" "0400−04FF" "0500−052F")
-SUBSETCODES=("0000−007F")
+SUBSETCODES=("0000−007F" "0080−00FF" "0100−017F" "0180−024F" "0370−03FF" "0400−04FF" "0500−052F")
 FORMATS=("woff" "woff2")
 
 # Набор значений переменных для шрифта FiraSans
