@@ -1,0 +1,12 @@
+:root {
+  --text-color: #000000;
+  --bg-sheet: #FFFFFF;
+  --bg-panel: #38383C;
+  --bg-tone-silver: #ADADAD;
+  --bg-disabled: #EBEBEB;
+  --bg-tone-gold: #FFB800;
+  --bg-tone-bronze: #BFA87B;
+  --icon-color: #FFFFFF;
+  --icon-disabled: #EBEBEB;
+  --update: #1313BD;
+}
