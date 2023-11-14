@@ -1,6 +1,9 @@
 # Основной скрипт для генерации файлов шрифтов
 GENERATE_FONT() {
-  rm -f "$OUTPUTPATH/../index.css"
+  if $FIRST; then
+    rm -f "$OUTPUTPATH/../index.css"
+    FIRST=false
+  fi
   for i in "${!SUBSETNAMES[@]}"; do
     for j in "${!FORMATS[@]}"; do
       for k in "${!FILENAMES[@]}"; do
@@ -8,22 +11,21 @@ GENERATE_FONT() {
         OUTPUT="$OUTPUTPATH/${FILENAMES[k]}-${SUBSETNAMES[i]}.${FORMATS[j]}"
         FONT_FAMILY="s/src/font\-family:\ ${FILENAMES[k]//\-*/};\n\ \ src/"
         FONT_STYLE="s/}/\ \ font-style: Regular;\n\ \ font-weight: ${FILENAMES[k]//*\-/};\n\ \ font-display: fallback;\n}/"
-        REPLACE="s/${INPUT//\//\\/}/${OUTPUT//\//\\/}/"
-        REPLACE="${REPLACE//\.\\\//}"
-        REPLACE="${REPLACE//\./\\\.}"
-        REPLACE="${REPLACE//src\\\//\/}"
-        REPLACE="${REPLACE//service\//assets\/}"
+        REPLACE="s!${INPUT//\.\/service/service}!${OUTPUT//\.\/src\/assets/\/assets}!"
         echo "----------------\n$INPUT -> $OUTPUT\n----------------\n"
         docker run --rm -v "$(pwd):/app" raeffs/glyphhanger --whitelist="${SUBSETCODES[i]}" --formats="${FORMATS[j]}" --subset="$INPUTPATH/${FILENAMES[k]}.$EXTENSION" --css
         mkdir -p "$OUTPUTPATH"
         mv $INPUT $OUTPUT
-        sed $REPLACE "${INPUTPATH//\.\//}/${FILENAMES[k]}.css" | sed s/file/record/ | sed "$FONT_FAMILY" | sed "${FONT_STYLE//Regular/normal}" | sed s/Bold/bold/ | sed s/Medium/medium/ >> "$OUTPUTPATH/../index.css"
+        echo $REPLACE
+        cat "${INPUTPATH//\.\//}/${FILENAMES[k]}.css" | sed "$REPLACE" | sed s/file/record/ | sed "$FONT_FAMILY" | sed -e "${FONT_STYLE//\:\ Regular/\:\ normal}" | sed s/\:\ Bold/\:\ bold/ | sed s/\:\ Medium/\:\ medium/ >> "$OUTPUTPATH/../index.css"
         echo "\n\n" >> "$OUTPUTPATH/../index.css"
         rm "$INPUTPATH/${FILENAMES[k]}.css"
       done
     done
   done
 }
+
+FIRST=true
 
 # Глобальные переменные
 # Набор названий для сабсетов
