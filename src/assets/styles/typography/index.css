@@ -1,1 +1,3 @@
-@import url(../../fonts/index.css);
+@import url(../../../../public/assets/fonts/index.css);
+@import url(./typo.css);
+@import url(./base.css);

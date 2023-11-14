@@ -1,0 +1,136 @@
+.screen-title {
+  color: var(--text-color, #000000);
+  font-family: var(--font-family);
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  line-height: var(--font-line-height-xl);
+  letter-spacing: var(--letter-spacing);
+}
+
+.screen-header {
+  color: var(--text-color, #000000);
+  font-family: var(--font-family);
+  font-size: var(--font-size-l);
+  font-weight: 500;
+  line-height: var(--font-line-height-l);
+  letter-spacing: var(--letter-spacing);
+}
+
+.header-1 {
+  color: var(--text-color, #000000);
+  font-family: var(--font-family);
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+  line-height: var(--font-line-height-xl);
+  letter-spacing: var(--letter-spacing);
+}
+
+.header-2 {
+  color: var(--text-color, #000000);
+  font-family: var(--font-family);
+  font-size: var(--font-size-l);
+  font-weight: bold;
+  line-height: var(--font-line-height-l);
+  letter-spacing: var(--letter-spacing);
+}
+
+.header-3 {
+  color: var(--text-color, #000000);
+  font-family: var(--font-family);
+  font-size: var(--font-size-m);
+  font-weight: bold;
+  line-height: var(--font-line-height-m);
+  letter-spacing: var(--letter-spacing);
+}
+
+.header-4 {
+  color: var(--text-color, #000000);
+  font-family: var(--font-family);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  line-height: var(--font-line-height-m);
+  letter-spacing: var(--letter-spacing);
+}
+
+.header-5 {
+  color: var(--text-color, #000000);
+  font-family: var(--font-family);
+  font-size: var(--font-size-m);
+  font-weight: normal;
+  line-height: var(--font-line-height-m);
+  letter-spacing: var(--letter-spacing);
+}
+
+.title {
+  color: var(--text-color, #000000);
+  font-family: var(--font-family);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  line-height: var(--font-line-height-m);
+  letter-spacing: var(--letter-spacing);
+}
+
+.paragraph {
+  color: var(--text-color, #000000);
+  font-family: var(--font-family);
+  font-size: var(--font-size-m);
+  font-weight: normal;
+  line-height: var(--font-line-height-m);
+  letter-spacing: var(--letter-spacing);
+}
+
+.bold {
+  color: var(--text-color, #000000);
+  font-family: var(--font-family);
+  font-size: var(--font-size-m);
+  font-weight: bold;
+  line-height: var(--font-line-height-m);
+  letter-spacing: var(--letter-spacing);
+}
+
+.underlined {
+  color: var(--text-color, #000000);
+  font-family: var(--font-family);
+  font-size: var(--font-size-m);
+  font-weight: normal;
+  line-height: var(--font-line-height-m);
+  letter-spacing: var(--letter-spacing);
+  text-decoration: underline;
+}
+
+.link {
+  color: var(--text-color, #000000);
+  font-family: var(--font-family);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  line-height: var(--font-line-height-m);
+  letter-spacing: var(--letter-spacing);
+  text-decoration: underline;
+}
+
+.small {
+  color: var(--text-color, #000000);
+  font-family: var(--font-family);
+  font-size: var(--font-size-s);
+  font-weight: normal;
+  line-height: var(--font-line-height-s);
+  letter-spacing: var(--letter-spacing);
+}
+
+.icon {
+  color: var(--text-color, #000000);
+  font-family: var(--font-family);
+  font-size: var(--font-size-m);
+  font-weight: normal;
+  line-height: var(--font-line-height-m);
+  letter-spacing: var(--letter-spacing);
+}
+
+.small-icon {
+  color: var(--text-color, #000000);
+  font-family: var(--font-family);
+  font-size: var(--font-size-s);
+  font-weight: normal;
+  line-height: var(--font-line-height-s);
+  letter-spacing: var(--letter-spacing);
+}
