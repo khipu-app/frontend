@@ -2,11 +2,13 @@ import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
 const keys = {
+  khipuName: 'khipu-name',
   khipuLogo: 'khipu-logo-image',
   khipuLaunchTimer: 'khipu-launch-timer',
 }
 
 const values = {
+  khipuName: 'Khipu',
   khipuLogo: 'logo-default',
   khipuLaunchTimer: 1000,
 }
