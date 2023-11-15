@@ -1,2 +1,4 @@
 @import url(./typography/index.css);
 @import url(./themes/light.css);
+
+@import url(./blocks/base.css);
