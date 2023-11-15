@@ -1,24 +1,13 @@
 <script setup>
 import { useRouter } from 'vue-router'
+import { useSettingsStore } from '../../stores/settings'
 
-import { ref } from 'vue'
-
-let logo = ref('logo-default')
-const logoFromSettings = localStorage.getItem('khipu-logo')
-if (logoFromSettings) {
-  logo = logoFromSettings
-}
-
-let launchTime = 1000 // ms
-const launchTimeFromSettings = localStorage.getItem('khipu-logo')
-if (logoFromSettings) {
-  launchTime = launchTimeFromSettings
-}
+const settings = useSettingsStore()
 
 const router = useRouter()
 setTimeout(() => {
   router.push({ name: 'Library' })
-}, launchTime);
+}, settings.khipuLaunchTimer);
 </script>
 
 <template>
@@ -26,7 +15,7 @@ setTimeout(() => {
     <img
       class="launch__logo"
       alt="Логотип Kiphu"
-      :src="`/assets/images/${logo}.svg`"
+      :src="`/assets/images/${settings.khipuLogo}.svg`"
       width="150"
       height="150"
     >
