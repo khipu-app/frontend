@@ -3,11 +3,11 @@ import { RouterView } from 'vue-router';
 </script>
 
 <template>
-  <header class="typo typo--mono"></header>
-  <main class="typo typo--text">
+  <header class="base__header typo typo--mono"></header>
+  <main class="base__main typo typo--text">
     <router-view />
   </main>
-  <footer class="typo typo--mono"></footer>
+  <footer class="base__footer typo typo--mono"></footer>
 </template>
 
 <style>
